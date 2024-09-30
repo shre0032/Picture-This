@@ -15,8 +15,39 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    <picture>
 
+      <!-- For landscape images at viewport sizes below 960px -->
+      <source
+      media="(max-width:959px)"
+      srcset="images/museum-landscape-320.jpg 320w,
+              images/museum-landscape-480.jpg 480w,
+              images/museum-landscape-640.jpg 640w,
+              images/museum-landscape-720.jpg 720w,
+              images/museum-landscape-960.jpg 960w,
+              images/museum-landscape-1440.jpg 1440w,
+              images/museum-landscape-1920.jpg 1920w,
+              images/museum-landscape-2160.jpg 2160w,
+              images/museum-landscape-2880.jpg 2880w"
+      sizes="100vw">  
+
+      <!-- For square images at veiwport sizes 960px and above -->
+      <source
+      media="(min-width:960px)"
+      srcset="images/museum-square-480.jpg 480w,
+              images/museum-square-640.jpg 640w,
+              images/museum-square-800.jpg 800w,
+              images/museum-square-960.jpg 960w,
+              images/museum-square-1280.jpg 1280w,
+              images/museum-square-1440.jpg 1440w,
+              images/museum-square-1600.jpg 1600w,
+              images/museum-square-1920.jpg 1920w,
+              images/museum-square-2400.jpg 2400w"
+      sizes="50vw">
+
+    <!-- Fallback image for older browsers that don't support srcset -->
+    <img src="images/museum.jpg" alt="placeholder">
+  </picture>
   </header>
 </body>
 
